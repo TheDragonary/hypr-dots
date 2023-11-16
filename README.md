@@ -1,2 +1,2 @@
-# hypr-dots
-Hyprland Dotfiles
+# Hyprland Dotfiles
+
