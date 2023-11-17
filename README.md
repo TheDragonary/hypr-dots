@@ -1,5 +1,7 @@
 # Hyprland Dotfiles
 
-Clone repo and run hyprinstall.sh to install all packages
+Clone repo and cd
 
-Copy .config and wallpapers folder to the home directory
+Run install_yay.sh to install yay AUR helper, which is used to install packages in install_hypr.sh
+
+Run install_hypr.sh to install all packages and copy config files and wallpapers to home directory
