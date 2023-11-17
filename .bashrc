@@ -1,0 +1,1 @@
+/home/dragonary/.bashrc

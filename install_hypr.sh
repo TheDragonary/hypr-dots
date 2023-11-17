@@ -4,5 +4,3 @@ lxappearance xfce4-settings polkit-gnome qt5-wayland qt6-wayland qt5ct qt6ct qt5
 brightnessctl bluez bluez-utils blueman python-requests network-manager-applet thunar-archive-plugin pacman-contrib gnu-free-fonts \
 noto-fonts noto-fonts-emoji ttf-font-awesome ttf-jetbrains-mono-nerd grimblast-git swaylock-effects sddm-git sddm-sugar-candy-git \
 papirus-icon-theme
-cp -r ~/hypr-dots/.config ~/.config
-cp -r ~/hypr-dots/wallpapers ~
