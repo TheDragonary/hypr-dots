@@ -4,4 +4,4 @@ xdg-desktop-portal-hyprland xdg-user-dirs lxappearance xfce4-settings polkit-gno
 qt5‑graphicaleffects qt5‑quickcontrols2 file-roller brightnessctl bluez bluez-utils blueman python-requests vtop \
 network-manager-applet thunar-archive-plugin pacman-contrib gnu-free-fonts noto-fonts noto-fonts-emoji ttf-font-awesome \
 ttf-jetbrains-mono-nerd grimblast-git swaylock-effects sddm-git sddm-sugar-candy-git papirus-icon-theme bibata-cursor-theme \
-vtop nwg-look-bin pywal
+vtop nwg-look-bin pywal ttf-fira-sans ttf-firacode-nerd
