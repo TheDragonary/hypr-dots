@@ -1,4 +1,5 @@
-touch /etc/X11/xorg.conf.d/20-touchpad.conf
+#!/bin/sh
+
 echo 'Section "InputClass"
         Identifier "libinput touchpad catchall"
         MatchIsTouchpad "on"
@@ -9,4 +10,4 @@ echo 'Section "InputClass"
         Option "NaturalScrolling" "on"
         Option "MiddleEmulation" "on"
         Option "DisableWhileTyping" "on"
-EndSection' > /etc/X11/xorg.conf.d/20-touchpad.conf
+EndSection' | sudo tee /etc/X11/xorg.conf.d/20-touchpad.conf
