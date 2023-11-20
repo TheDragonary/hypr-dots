@@ -10,14 +10,14 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/window", "mpd", "custom/media"],
     "modules-center": ["idle_inhibitor", "clock"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "tray"],
+    "modules-right": ["tray", "cpu", "memory", "temperature", "network", "pulseaudio", "battery"],
 
     // Modules configuration
     "hyprland/workspaces": {
     	"disable-scroll": true,
     	"all-outputs": true,
     	"warp-on-scroll": false,
-    	"format": "{name}",
+    	"format": "{name}"
     //	"format-icons": {
     //         "1": "",
     //         "2": "",
