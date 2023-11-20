@@ -1,3 +1,14 @@
+#!/bin/sh
+
+# Delete old folders/symlinks
+rm -rf ~/.config/hypr
+rm -rf ~/.config/swaylock
+rm -rf ~/.config/waybar
+rm -rf ~/.config/wlogout
+rm -rf ~/.config/swww.sh
+rm -rf ~/wallpapers
+
+# Create symbolic links
 ln -s ~/hypr-dots/.config/hypr ~/.config/hypr
 ln  -s ~/hypr-dots/.config/swaylock ~/.config/swaylock
 ln -s ~/hypr-dots/.config/waybar ~/.config/waybar
