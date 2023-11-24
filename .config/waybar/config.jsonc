@@ -14,20 +14,18 @@
 
     // Modules configuration
     "hyprland/workspaces": {
-    	"disable-scroll": true,
-    	"all-outputs": true,
-    	"warp-on-scroll": false,
-    	"format": "{name}"
-    //	"format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
+    	"on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+    	"format": "",
+    	"format-icons": {
+             "urgent": "",
+             "focused": "",
+             "default": ""
+        },
+        "persistent_workspaces": {
+             "*": 3
+        }
     },
 
     "hyprland/window": {

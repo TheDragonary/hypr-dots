@@ -43,3 +43,6 @@ swww img "$current_wallpaper.$ext" --transition-type=grow --transition-pos=0.98,
 
 # Run pywal to generate color scheme based on the new wallpaper
 wal -i "$current_wallpaper.$ext" -s
+
+./.config/swww/pywal.sh
+./.config/waybar/restart_waybar.sh
