@@ -18,8 +18,8 @@ echo "${dir[counter]}" # Current wallpaper
 # Increment the number in counter
 ((counter++))
 
-# If the counter is higher than or equal to the number of items in the array, it will reset the counter to 0
-if [ $counter -ge ${#dir[@]} ]; then
+# If the counter is higher than or equal to the number of items in the array or less than or equal to 0 - number of items, it will reset the counter to 0
+if [ $counter -ge ${#dir[@]} ] || [ $counter -le $((0-${#dir[@]})) ]; then
     counter=0
 fi
 
@@ -40,3 +40,6 @@ cp "${dir[counter]}" "$current_wallpaper.$ext"
 
 # Set the wallpaper
 swww img "$current_wallpaper.$ext" --transition-type=grow --transition-pos=0.98,0.97 --transition-fps=60 --transition-step=90
+
+# Run pywal to generate color scheme based on the new wallpaper
+wal -i "$current_wallpaper.$ext" -s

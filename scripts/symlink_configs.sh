@@ -7,6 +7,7 @@ rm -rf ~/.config/swayidle
 rm -rf ~/.config/waybar
 rm -rf ~/.config/wlogout
 rm -rf ~/.config/swww
+rm -rf ~/.config/kitty
 rm -rf ~/.config/mako
 rm -rf ~/.config/ranger
 rm -rf ~/wallpapers
@@ -18,6 +19,7 @@ ln -s ~/hypr-dots/.config/swayidle ~/.config
 ln -s ~/hypr-dots/.config/waybar ~/.config
 ln -s ~/hypr-dots/.config/wlogout ~/.config
 ln -s ~/hypr-dots/.config/swww ~/.config
+ln -s ~/hypr-dots/.config/kitty ~/.config
 ln -s ~/hypr-dots/.config/mako ~/.config
 ln -s ~/hypr-dots/.config/ranger ~/.config
 ln -s ~/hypr-dots/wallpapers ~
