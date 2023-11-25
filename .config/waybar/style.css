@@ -1,9 +1,9 @@
-@import "colors-waybar.css";
+@import "../../.cache/wal/colors-waybar.css";
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family:"Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 window#waybar {
@@ -27,8 +27,9 @@ button:hover {
 }
 
 #workspaces {
-    background: @color7;
+    background: #ffffff;
     border-radius: 20px;
+    opacity: 0.8;
 }
 
 #workspaces button {
@@ -42,7 +43,7 @@ button:hover {
 }
 
 #workspaces button.active {
-    background: @color6;
+    background: @color3;
     border-radius: 20px;
     min-width: 40px;
     transition: all 0.3s ease-in-out;
@@ -50,7 +51,7 @@ button:hover {
 }
 
 #workspaces button:hover {
-    background: @color6;
+    background: @color3;
     border-radius: 20px;
     min-width: 40px;
     transition: all 0.3s ease-in-out;
@@ -61,12 +62,18 @@ button:hover {
     background: #ff0000;
 }
 
+#taskbar {
+    color: #ffffff;
+    background-color: @color3;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
 #clock,
 #battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
 #backlight,
 #network,
 #pulseaudio,
@@ -78,12 +85,29 @@ button:hover {
 #scratchpad,
 #mpd {
     padding: 0 10px;
-    color: @color7;
-    background-color: @color6;
-    border-color: @color7;
+    color: #ffffff;
+    background-color: @color3;
+    border-color: #ffffff;
     border-style: solid;
     border-width: 3px;
     border-radius: 20px;
+    opacity: 0.8;
+}
+
+#cpu,
+#memory,
+#disk {
+    padding: 0 10px;
+}
+
+#hardware {
+    color: #ffffff;
+    background-color: @color3;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 20px;
+    opacity: 0.8;
 }
 
 #window,
@@ -132,9 +156,6 @@ button:hover {
     animation-direction: alternate;
 }
 
-label:focus {
-    background-color: #000000;
-}
 /*
 #cpu {
     background-color: #2ecc71;
