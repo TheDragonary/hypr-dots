@@ -10,7 +10,6 @@ rm -rf ~/.config/swww
 rm -rf ~/.config/kitty
 rm -rf ~/.config/mako
 rm -rf ~/.config/ranger
-rm -rf ~/wallpapers
 
 # Create symbolic links
 ln -s ~/hypr-dots/.config/hypr ~/.config
@@ -22,4 +21,3 @@ ln -s ~/hypr-dots/.config/swww ~/.config
 ln -s ~/hypr-dots/.config/kitty ~/.config
 ln -s ~/hypr-dots/.config/mako ~/.config
 ln -s ~/hypr-dots/.config/ranger ~/.config
-ln -s ~/hypr-dots/wallpapers ~
