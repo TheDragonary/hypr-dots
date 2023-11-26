@@ -50,7 +50,7 @@
         "on-click": "activate",
         "on-click-middle": "close",
         "rewrite": {
-            "Firefox Web Browser": "Firefox",
+            "Firefox Web Browser": "Firefox"
         }
     },
 
@@ -120,7 +120,7 @@
     },
 
     "cpu": {
-        "format": "  {usage}%",
+        "format": "  {usage}%",
         "on-click": "kitty -e htop"
     },
     
