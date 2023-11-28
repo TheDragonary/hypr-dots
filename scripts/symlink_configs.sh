@@ -12,6 +12,8 @@ rm -rf ~/.config/alacritty
 rm -rf ~/.config/mako
 rm -rf ~/.config/ranger
 rm -rf ~/.config/neofetch
+rm -rf ~/.config/wofi
+rm -rf ~/.config/starship.toml
 
 # Create symbolic links
 ln -s ~/hypr-dots/.config/hypr ~/.config
@@ -25,3 +27,5 @@ ln -s ~/hypr-dots/.config/alacritty ~/.config
 ln -s ~/hypr-dots/.config/mako ~/.config
 ln -s ~/hypr-dots/.config/ranger ~/.config
 ln -s ~/hypr-dots/.config/neofetch ~/.config
+ln -s ~/hypr-dots/.config/wofi ~/.config
+ln -s ~/hypr-dots/.config/starship.toml ~/.config
