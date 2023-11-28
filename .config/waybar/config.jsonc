@@ -193,6 +193,6 @@
 
     "custom/apps": {
     	"format": "Apps",
-	"on-click": "wofi"
+	"on-click": "wofi -c $HOME/.config/wofi/config-lmenu"
     }
 }
