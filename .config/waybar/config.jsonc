@@ -9,9 +9,9 @@
     "margin-right": 10,
     
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "hyprland/window", "mpd", "custom/media"],
+    "modules-left": ["custom/apps", "hyprland/workspaces", "custom/media"],
     "modules-center": ["idle_inhibitor", "clock"],
-    "modules-right": ["tray", "pulseaudio", "group/hardware", "network", "battery"],
+    "modules-right": ["tray", "pulseaudio", "group/hardware", "network", "battery", "custom/powermenu"],
 
     // Modules configuration
     "hyprland/workspaces": {
@@ -38,7 +38,8 @@
 		"vim(.*)":"  $1",
 		"hyprconf":"  hyprland.conf",
 		"(.*) - gedit":"  $1",
-		"(.*) - Discord":"  $1"
+		"(.*) - Discord":"  $1",
+		"Spotify Free":" Spotify"
 	},
 	"seperate-outputs": true
     },
@@ -62,34 +63,7 @@
             "locked": "",
             "unlocked": ""
         }
-    },
-
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
+    }, 
 
     "idle_inhibitor": {
         "format": "{icon}",
@@ -181,8 +155,8 @@
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        //"format-source": "{volume}% ",
+        //"format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -196,16 +170,28 @@
     },
     
     "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
+    	"format": "{icon} {}",
+    	"return-type": "json",
+    	"max-length": 40,
+    	"format-icons": {
             "spotify": "",
             "default": "🎜"
         },
-        "escape": true,
-        // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    	"on-click": "playerctl play-pause",
+    	"on-click-right": "playerctl stop",
+    	"smooth-scrolling-threshold": 3, // This value was tested using a trackpad, it should be lowered if using a mouse.
+    	"on-scroll-up": "playerctl next",
+    	"on-scroll-down": "playerctl previous",
+    	"exec": "python $HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
+    },
+
+    "custom/powermenu": {
+   	"format": "  ",
+	"on-click": "wlogout -p layer-shell"	
+    },
+
+    "custom/apps": {
+    	"format": "Apps",
+	"on-click": "wofi"
     }
 }
-

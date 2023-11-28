@@ -62,13 +62,13 @@ button:hover {
 }
 
 #taskbar {
-    color: #ffffff;
     background-color: @color3;
-    border-color: #ffffff;
-    border-style: solid;
-    border-width: 3px;
     border-radius: 20px;
     opacity: 0.8;
+}
+
+#taskbar button:hover {
+    border-radius: 20px;
 }
 
 #clock,
@@ -78,11 +78,10 @@ button:hover {
 #pulseaudio,
 #wireplumber,
 #custom-media,
+#custom-apps,
 #tray,
 #mode,
-#idle_inhibitor,
-#scratchpad,
-#mpd {
+#idle_inhibitor {
     padding: 0 10px;
     color: #ffffff;
     background-color: @color3;

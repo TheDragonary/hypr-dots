@@ -8,8 +8,10 @@ rm -rf ~/.config/waybar
 rm -rf ~/.config/wlogout
 rm -rf ~/.config/swww
 rm -rf ~/.config/kitty
+rm -rf ~/.config/alacritty
 rm -rf ~/.config/mako
 rm -rf ~/.config/ranger
+rm -rf ~/.config/neofetch
 
 # Create symbolic links
 ln -s ~/hypr-dots/.config/hypr ~/.config
@@ -19,5 +21,7 @@ ln -s ~/hypr-dots/.config/waybar ~/.config
 ln -s ~/hypr-dots/.config/wlogout ~/.config
 ln -s ~/hypr-dots/.config/swww ~/.config
 ln -s ~/hypr-dots/.config/kitty ~/.config
+ln -s ~/hypr-dots/.config/alacritty ~/.config
 ln -s ~/hypr-dots/.config/mako ~/.config
 ln -s ~/hypr-dots/.config/ranger ~/.config
+ln -s ~/hypr-dots/.config/neofetch ~/.config
