@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cp $HOME/.config/mako/config.default $HOME/.config/mako/config
+
 . "${HOME}/.cache/wal/colors.sh"
 
 conffile="$HOME/.config/mako/config"
