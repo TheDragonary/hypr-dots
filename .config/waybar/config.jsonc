@@ -178,11 +178,11 @@
             "spotify": "",
             "default": "🎜"
         },
-    	"on-click": "playerctl play-pause",
-    	"on-click-right": "playerctl stop",
+    	"on-click": "playerctl play-pause --player=spotify,firefox next",
+    	"on-click-right": "playerctl stop --player=spotify,firefox next",
     	"smooth-scrolling-threshold": 3, // This value was tested using a trackpad, it should be lowered if using a mouse.
-    	"on-scroll-up": "playerctl next",
-    	"on-scroll-down": "playerctl previous",
+    	"on-scroll-up": "playerctl next --player=spotify,firefox next",
+    	"on-scroll-down": "playerctl previous --player=spotify,firefox next",
     	"exec": "python $HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
     },
 
