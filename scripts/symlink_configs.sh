@@ -13,6 +13,7 @@ rm -rf ~/.config/mako
 rm -rf ~/.config/ranger
 rm -rf ~/.config/neofetch
 rm -rf ~/.config/wofi
+rm -rf ~/.config/wal
 rm -rf ~/.config/starship.toml
 
 # Create symbolic links
@@ -28,4 +29,5 @@ ln -s ~/hypr-dots/.config/mako ~/.config
 ln -s ~/hypr-dots/.config/ranger ~/.config
 ln -s ~/hypr-dots/.config/neofetch ~/.config
 ln -s ~/hypr-dots/.config/wofi ~/.config
+ln -s ~/hypr-dots/.config/wal ~/.config
 ln -s ~/hypr-dots/.config/starship.toml ~/.config

@@ -45,3 +45,4 @@ swww img "$current_wallpaper.$ext" --transition-type=grow --transition-pos=0.98,
 wal -i "$current_wallpaper.$ext" -s
 
 ./.config/waybar/restart_waybar.sh
+./.config/mako/update-theme.sh
