@@ -80,7 +80,7 @@
 
     "clock": {
         "timezone": "Europe/London",
-        "tooltip-format": "<big>{:%A, %D\n%d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<big>{:%A, %d/%m/%y\n%d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
 
