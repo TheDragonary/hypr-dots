@@ -95,12 +95,12 @@
 
     "cpu": {
         "format": "  {usage}%",
-        "on-click": "kitty -e htop"
+        "on-click": "kitty -e btop"
     },
     
     "memory": {
         "format": "  {}%",
-        "on-click": "kitty -e htop"
+        "on-click": "kitty -e btop"
     },
     
     "temperature": {
@@ -115,7 +115,7 @@
     "disk": {
         "format": " {percentage_used}%",
         "path": "/",
-        "on-click": "kitty -e htop"
+        "on-click": "kitty -e btop"
     },
     
     "backlight": {
