@@ -49,6 +49,6 @@ ring-clear-color=ffffff
 text-clear-color=ffffff
 inside-clear-color=000000aa
 
-grace=3
+grace=2
 grace-no-mouse
 grace-no-touch
