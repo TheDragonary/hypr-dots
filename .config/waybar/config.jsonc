@@ -81,7 +81,7 @@
     "clock": {
         "timezone": "Europe/London",
         "tooltip-format": "<big>{:%A, %d/%m/%y\n%d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%d/%m/%Y}"
     },
 
     "group/hardware": {
@@ -188,11 +188,13 @@
 
     "custom/powermenu": {
    	"format": "  ",
+	"tooltip": false,
 	"on-click": "wlogout -p layer-shell"	
     },
 
     "custom/apps": {
     	"format": "Apps",
+	"tooltip": false,
 	"on-click": "wofi -c $HOME/.config/wofi/config-lmenu"
     }
 }
