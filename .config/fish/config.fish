@@ -3,4 +3,5 @@ if status is-interactive
     starship init fish | source
     pfetch
     set fish_greeting
+    alias hyprconf="vim .config/hypr/hyprland.conf"
 end
