@@ -3,6 +3,7 @@ if status is-interactive
     starship init fish | source
     pfetch
     set fish_greeting
-    alias hyprconf="vim .config/hypr/hyprland.conf"
+    alias hyprconf="nvim ~/.config/hypr/hyprland.conf"
+    alias feh="feh -."
     set -gx MANPAGER nvim +Man!
 end

@@ -8,7 +8,10 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
-alias hyprconf='vim ~/.config/hypr/hyprland.conf'
+alias hyprconf='nvim ~/.config/hypr/hyprland.conf'
 alias feh='feh -.'
 
-neofetch
+export MANPAGER="nvim +Man!"
+
+eval "$(starship init bash)"
+pfetch
