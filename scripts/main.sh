@@ -99,9 +99,9 @@ optional=(
 
 clear
 
-echo "╔════════════════════════════════╗"
-echo "║ Dragonary's Hyprland Installer ║"
-echo "╚════════════════════════════════╝"
+echo "╔════════════════════════════════╗
+║ Dragonary's Hyprland Installer ║
+╚════════════════════════════════╝"
 
 echo 'Installing yay...' 
 if pacman -Qi yay &> /dev/null; then
@@ -116,6 +116,7 @@ else
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
+    cd ..
     rm -rf yay
   fi
 fi
@@ -126,20 +127,63 @@ if [[ $install == 'N' || $install == 'n' ]]; then
   echo 'Quitting installer...'
   exit
 else
+  echo -e 'Installing main packages\n'
   for x in ${pkgs[@]};
   do
-    echo $x
+    echo -e 'Installing '$x
+    echo 'Installing...'
+    #yay -S --needed --noconfirm $x
+    echo -e $x' installed\n'
   done
+  echo -e 'Main packages installed\n'
+
+  echo -e 'Installing fonts\n'
   for x in ${fonts[@]};
   do
-    echo $x
+    echo -e 'Installing '$x
+    echo 'Installing...'
+    #yay -S --needed --noconfirm $x
+    echo -e $x' installed\n'
   done
-  for x in ${extras[@]};
-  do
-    echo $x
-  done
-  for x in ${optional[@]};
-  do
-    echo $x
-  done
+  echo -e 'Fonts installed\n'
+  
+  read -ep 'Would you like to install extra packages? You can manually choose each, choose all, or none [Y/a/n] ' extra
+  echo ""
+  if [[ $extra == 'A' || $extra == 'a' ]]; then
+    for x in ${extras[@]};
+    do
+      echo -e 'Installing '$x
+      echo 'Installing...'
+      #yay -S --needed --noconfirm $x
+      echo -e $x' installed\n'
+    done
+  elif [[ $extra == 'N' || $extra == 'n' ]]; then
+    echo 'Skipping...'
+  else
+    for x in ${extras[@]};
+    do
+      echo -e 'Installing '$x
+      echo 'Installing...'
+      sleep 1
+      #yay -S --needed $x
+      echo -e $x' installed\n'
+    done
+  fi
+  echo -e 'Extra packages installed\n'
+  
+  read -p 'Would you like to install optional packages? This includes Thunderbird, Discord, Spotify and VSCodium. You may want to choose certain packages or choose none [Y/n] ' option
+  echo ""
+  if [[ $option == 'N' || $option == 'n' ]]; then
+    echo 'Skipping...'
+  else
+    for x in ${optional[@]};
+    do
+      echo -e 'Installing '$x
+      echo 'Installing...'
+      #yay -S --needed $x
+      echo -e $x' installed\n'
+    done
+  fi
+  echo -e 'Package installation complete!\n'
+  echo -e 'Copying configs...\n'
 fi
