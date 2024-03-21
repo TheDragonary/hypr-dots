@@ -165,7 +165,7 @@ if [[ $install == 'Y' || $install == 'y' || $install == '' ]]; then
     echo -e 'Skipping...\n'
   fi
 
-  read -p 'Would you like to install optional packages? This includes Thunderbird, Discord, Spotify and VSCodium. You may want to choose certain packages or choose none [Y/n] ' option
+  read -p 'Would you like to install optional packages? This includes Thunderbird, Discord, Spotify and VSCode. You may want to choose certain packages or choose none [Y/n] ' option
   echo ""
   if [[ $option == 'Y' || $option == 'y' || $option == '' ]]; then
     for x in ${optional[@]};
