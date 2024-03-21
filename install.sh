@@ -78,6 +78,7 @@ fonts=(
 
 extras=(
   libreoffice-fresh
+  alacritty
   mpv
   gedit
   feh
@@ -96,6 +97,8 @@ optional=(
   spotify
   code
   thunderbird
+  qbittorent
+  gimp
 )
 
 clear
