@@ -94,7 +94,7 @@ extras=(
 optional=(
   discord
   spotify
-  vscodium
+  code
   thunderbird
 )
 
