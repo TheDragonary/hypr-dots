@@ -265,31 +265,30 @@ if [[ $install == 'Y' || $install == 'y' || $install == '' ]]; then
 ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"' | sudo tee /etc/udev/rules.d/99-swayosd.rules
   sudo usermod -a -G video $USER
   echo -e 'Fixed!\n'
-  
-  read -p "You can skip this next part. You probably don't have a Sony VAIO or need Broadcom drivers so just type N. This is just mainly for me only. [y/N] " fix 
-  if [[ $fix == 'Y' || $fix == 'y' ]]; then
-    read -p 'Do you have a Sony VAIO or laptop with a keyboard that uses the i8042 driver? This is to fix the keyboard not working after suspend. [y/N] ' sony
-    if [[ $sony == 'Y' || $sony == 'y' ]]; then 
-      git clone https://github.com/mistine/i8042-keyboard-fix-linux
-      cd i8042-keyboard-fix-linux
-      sudo mv keyboard-reset.sh /usr/lib/systemd/system-sleep/
-      chmod a+x /usr/lib/systemd/system-sleep/keyboard-reset.sh
-      cd ..
-      rm -rf i8042-keyboard-fix-linux
-      echo -e 'Fixed!\n'
-    else 
-      echo -e 'Lucky you.. Skipping...\n'
-    fi
-    read -p 'Do you need Broadcom firmware? This fixes Bluetooth for it. [y/N] ' broadcom 
-    if [[ $broadcom == 'Y' || $broadcom == 'y' ]]; then 
-      yay -S --needed --noconfirm bcm43142a0-firmware
-      echo -e 'Installed!\n'
-    else
-      echo -e 'Lucky you.. Skipping...\n'
-    fi
+
+  echo -e 'This next part will just detect some drivers and see if they need fixing\n'
+  echo 'Detecting i8042 keyboard driver...'
+  if cat /proc/bus/input/devices | grep i8042 &> /dev/null; then
+    echo 'i8042 keyboard driver detected. Fixing...'
+    git clone https://github.com/mistine/i8042-keyboard-fix-linux
+    cd i8042-keyboard-fix-linux
+    sudo mv keyboard-reset.sh /usr/lib/systemd/system-sleep/
+    chmod a+x /usr/lib/systemd/system-sleep/keyboard-reset.sh
+    cd ..
+    rm -rf i8042-keyboard-fix-linux
+    echo -e 'Fixed!\n'
+  else 
+    echo -e 'i8042 driver undetected. Lucky you.. Skipping...\n'
+  fi
+
+  echo 'Detecting Broadcom BCM43142'
+  if lspci | grep BCM43142 &> /dev/null; then 
+    echo 'Broadcom BCM43142 detected. Installing firmware...'
+    yay -S --needed --noconfirm bcm43142a0-firmware
+    echo -e 'Installed!\n'
   else
-      echo -e 'Lucky you.. Skipping...\n' 
-  fi 
+    echo -e 'Broadcom BCM43142 undetected. Lucky you.. Skipping...\n'
+  fi
 
   echo 'Enabling SDDM and applying theme...'
   sudo systemctl enable sddm.service
