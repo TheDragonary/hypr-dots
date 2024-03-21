@@ -129,7 +129,6 @@ if [[ $install == 'Y' || $install == 'y' || $install == '' ]]; then
   for x in ${pkgs[@]};
   do
     echo -e 'Installing '$x
-    echo 'Installing...'
     yay -S --needed --noconfirm $x
     echo -e $x' installed\n'
   done
@@ -139,7 +138,6 @@ if [[ $install == 'Y' || $install == 'y' || $install == '' ]]; then
   for x in ${fonts[@]};
   do
     echo -e 'Installing '$x
-    echo 'Installing...'
     yay -S --needed --noconfirm $x
     echo -e $x' installed\n'
   done
