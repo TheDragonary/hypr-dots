@@ -34,9 +34,9 @@ while true; do
             ext="${wp##*.}"
             echo "$wp"
             echo "$ext"
-            swww img "$wp"
             # Run pywal to generate color scheme based on the new wallpaper
 	    wal -i "$wp" -s
+            swww img "$wp"
 	    . $HOME/.config/waybar/restart_waybar.sh
 	    . $HOME/.config/mako/update-theme.sh
             # Store the current wallpaper path for the next iteration

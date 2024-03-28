@@ -37,9 +37,9 @@ while true; do
             echo "$ext"
             rm -f "$current_wallpaper".*
             cp "$wp" "$current_wallpaper.$ext"
-            swww img "$current_wallpaper.$ext" --transition-type=grow --transition-pos=0.98,0.97 --transition-fps=60 --transition-step=90
             # Run pywal to generate color scheme based on the new wallpaper
 	    wal -i "$current_wallpaper.$ext" -s
+            swww img "$current_wallpaper.$ext" --transition-type=grow --transition-pos=0.98,0.97 --transition-fps=60 --transition-step=90
 	    . $HOME/.config/waybar/restart_waybar.sh
 	    . $HOME/.config/mako/update-theme.sh
             # Store the current wallpaper path for the next iteration
