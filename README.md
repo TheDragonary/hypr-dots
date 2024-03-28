@@ -14,6 +14,8 @@
 
 The coolest feature is probably the wallpaper switcher, and I guess the waybar is neat too. The colours changing with the wallpaper is also pretty cool. I don't have much to say. This is a pretty simple rice after all.
 
+After installing, press Win + T to change background, this should get swww and pywal running and also get rid of the error message.
+
 ## Screenshots
 ![](https://github.com/TheDragonary/hypr-dots/blob/main/screenshots/screenshot.png)
 ![](https://github.com/TheDragonary/hypr-dots/blob/main/screenshots/screenshot2.png)
