@@ -224,6 +224,7 @@ if [[ $install == 'Y' || $install == 'y' || $install == '' ]]; then
     ln -s ~/hypr-dots/.config/wal ~/.config
     ln -s ~/hypr-dots/.config/fish ~/.config
     ln -s ~/hypr-dots/.config/starship.toml ~/.config
+    cp -r ~/hypr-dots/wallpapers ~
     echo -e 'Configs symlinked!\n'
   else
     echo -e 'Skipping...\n'
